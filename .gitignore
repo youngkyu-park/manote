@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# PyInstaller build cache + 큰 산출물 (94MB+, GitHub 100MB 한도 회피)
+build/
+dist/manote.exe
+dist/updater.exe
+update.exe
+
+# 외부 의존 DLL (외부 라이브러리, 빌드 시 자동 복사)
+PacketDotNet.dll
+SharpPcap.dll
+dist/*.dll
+nuget_dlls/
+
+# 로그 (PC별, 시간별로 변동)
+*.log
+*.log.old
+*.log.err
+dist/*.log
+dist/*.log.old
+dist/notice_codes_observed.jsonl
+dist/notice_codes_observed.jsonl.old
+tmp_err.log
+tmp_out.log
+
+# 사용자 상태 / 학습 데이터 (PC마다 다름, 충돌 방지)
+dist/mabi_config.json
+dist/mabi_data.json
+dist/notice_learning_state.json
+dist/barter_selections.json
+dist/barter_progress.json
+dist/craft_state.json
+dist/craft_learning.json
+mabi_config.json
+mabi_data.json
+
+# 패킷 분석 임시 덤프 (큰 파일, 분석 시에만)
+packet_research_dump*.txt
+dist/packet_research_dump*.txt
+*.bin
+notice2_raw.bin
+notice2_decrypted.txt
+
+# 분석 결과 (텍스트, 작아서 선택)
+barter_analysis.txt
+barter_summary.json
+
+# 백업/임시
+백업/
+새 폴더/
+dist/새 폴더/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
